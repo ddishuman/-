@@ -57,7 +57,7 @@ print(sumBelowX(100))
 
 ## Part 2
 
-###### a) #######
+###### (a) #######
 import requests
 from requests_html import HTML
 
@@ -77,7 +77,7 @@ def parse_article_meta(entry, board_name):
             'date' : entry.find('div.date', first=True).text,
             'author' : entry.find('div.author', first=True).text,
             'title' : entry.find('div.title', first=True).text,
-            #'article' : entry.find('div.article', first=True).text,  #不確定
+            'article' : entry.find('div.article-metaline'),  #不確定
             'board' : board_name
             }
 
